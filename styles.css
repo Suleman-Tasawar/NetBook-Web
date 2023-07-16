@@ -1,0 +1,674 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  font-family: "Inter", sans-serif;
+}
+
+/*Layout*/
+
+.app {
+  height: 550px;
+  background: linear-gradient(340deg, #d4e7fe 0%, #fff 100%);
+}
+.header {
+  font-size: 14px;
+  padding-top: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #dfecfd;
+}
+
+.nav--first {
+  margin-left: 2rem;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.nav--links > ul > li,
+.search--icon,
+button,
+.foot--links,
+.social--links {
+  cursor: pointer;
+}
+.nav--second,
+.search--bar {
+  margin-right: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav--links > ul {
+  display: flex;
+  list-style-type: none;
+}
+
+.hero--section,
+.about--section,
+.acievements--section,
+.team--section,
+.team--people--info,
+.foot--nav {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.team--section {
+  flex-direction: column;
+}
+
+.foot--nav {
+  width: 100%;
+  background: #2b2b39;
+}
+
+.acievements--section,
+.team--section,
+.team--people--info,
+.foot--nav {
+  margin-top: 5.5rem;
+}
+
+/*Typo*/
+
+.nav--links > ul > li {
+  margin-left: 1rem;
+}
+
+.search--bar {
+  border-radius: 12px;
+  height: 30px;
+  background-color: #fff;
+}
+.search--input > input {
+  width: 150px;
+  height: 25px;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+}
+
+.login--button > button {
+  width: 120px;
+  height: 50px;
+  border-radius: 14px;
+  background-color: #217bf4;
+  color: #ffff;
+  border: none;
+}
+.hero--info {
+  width: 500px;
+}
+.hero--highlight {
+  width: 210px;
+  height: 30px;
+  background-color: #217bf4;
+  opacity: 0.10000000149011612;
+  border-radius: 7px;
+  text-align: center;
+}
+
+.hero--highlight h3 {
+  color: #217bf4;
+}
+
+.hero--info > h1 {
+  margin-top: 0.8rem;
+  color: #0a093d;
+  font-size: 56px;
+}
+
+.hero--info > p {
+  margin-top: 0.8rem;
+  color: #656464;
+  font-size: 18px;
+}
+
+.hero--buttons {
+  margin-top: 0.8rem;
+  display: flex;
+}
+
+.hero--buttons > div > button {
+  width: 160px;
+  height: 60px;
+  border-radius: 8px;
+  border: none;
+  margin-left: 1rem;
+}
+
+.hero--buttons > div:nth-of-type(1) > button {
+  background: #217bf4;
+  color: #fff;
+}
+
+.hero--buttons > div:nth-of-type(2) > button {
+  color: #217bf4;
+  background: #fff;
+}
+
+.about--info {
+  width: 410px;
+}
+
+.about--info > h3 {
+  color: #217bf4;
+  font-size: 18px;
+}
+
+.about--info > h1 {
+  margin-top: 0.8rem;
+  color: #0a093d;
+  font-size: 36px;
+}
+
+.about--info > p {
+  margin-top: 0.8rem;
+  color: #656464;
+  font-size: 18px;
+}
+
+.about--lists {
+  margin-top: 0.8rem;
+}
+
+.about--lists > ul > li {
+  color: #0a093d;
+  list-style-type: none;
+}
+
+.about--lists > ul > li::before {
+  content: "\2022"; /* Add content: \2022 is the CSS Code/unicode for a bullet */
+  color: #217bf4; /* Change the color */
+  font-weight: bold; /* If you want it to be bold */
+  display: inline-block; /* Needed to add space between the bullet and the text */
+  width: 1em; /* Also needed for space (tweak if needed) */
+  margin-left: -1em; /* Also needed for space (tweak if needed) */
+}
+
+.ratings-blocks,
+.acievements--block,
+.award--block {
+  padding: 1rem;
+  border: 1px solid #656464;
+  border-radius: 14px;
+  margin-top: 2rem;
+}
+
+.ratings-block:hover,
+.acievements--block:hover,
+.award--block:hover {
+  background: #fff;
+  box-shadow: 0px 26px 49px 0px rgba(146, 165, 184, 0.14);
+}
+
+.clients-ratings,
+.clients-likes {
+  margin-top: 0.8rem;
+  margin-right: 10rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.acievements--section > div {
+  width: 330px;
+}
+
+.ratings--highlight,
+.awards--highlight {
+  color: #217bf4;
+}
+
+.ratings--para,
+.award--para {
+  margin-top: 1.4rem;
+  color: #656464;
+}
+
+.ratings--button {
+  margin-top: 1.4rem;
+  border: none;
+  color: #217bf4;
+  background-color: #fff;
+}
+
+.award--button {
+  margin-top: 1.4rem;
+  border: none;
+  color: #656464;
+  background-color: #ffff;
+}
+
+.acievements--block h3 {
+  color: #217bf4;
+}
+
+.acievements--block h1 {
+  margin-top: 1.4rem;
+  color: #0a093d;
+  font-size: 32px;
+}
+
+.acievements--block p {
+  margin-top: 1.4rem;
+  color: #656464;
+}
+
+.acievements--block button {
+  margin-top: 1.4rem;
+  width: 190px;
+  height: 58px;
+  border: none;
+  border-radius: 16px;
+  background: #217bf4;
+  color: #ffff;
+}
+
+.team--info > p:nth-of-type(1) {
+  color: #217bf4;
+}
+
+.team--info > h1 {
+  margin-top: 0.8rem;
+  color: #0a093d;
+  font-size: 36px;
+}
+
+.team--text--fade {
+  margin-top: 0.8rem;
+  color: #656464;
+}
+
+.team--info {
+  text-align: center;
+}
+.team--accordian {
+  margin-top: 2rem;
+  margin-left: 4rem;
+  width: 460px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 14px;
+  background: #cfdcec;
+}
+
+.team--accordian > div > button {
+  background: #a6c4eb;
+  color: #656464;
+  width: 150px;
+  height: 55px;
+  border: none;
+  border-radius: 15px;
+}
+
+.team--accordian > div > button:active {
+  color: #fff;
+  background: #217bf4;
+}
+
+.team--img {
+  width: 166px;
+  height: 171px;
+  background-image: url("Assets/Abstrackali.png");
+}
+
+.team--name > h1 {
+  margin-top: 1rem;
+  color: #2f2c4a;
+}
+
+.team--code > p {
+  margin-top: 0.5rem;
+  color: #656464;
+}
+
+.team--profile {
+  margin-left: 2.5rem;
+}
+
+.foot--links > ul {
+  display: flex;
+  color: #fff;
+  list-style-type: none;
+}
+
+.foot--links > ul,
+li {
+  margin-left: 3rem;
+}
+
+.social--links {
+  height: 170px;
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.social--links > div {
+  margin-left: 1rem;
+  width: 36px;
+  height: 36px;
+  border-radius: 16px;
+  background: #fff;
+}
+
+/*Images*/
+.hero--illustration > img,
+.about--illustration > img {
+  width: 500px;
+  height: 500px;
+}
+
+/*Media Querries*/
+
+@media screen and (min-width: 768px) and (max-width: 1100px) {
+  .nav--second,
+  .search--bar {
+    margin-left: 1.7rem;
+  }
+
+  .search--input > input {
+    width: 100px;
+  }
+
+  .hero--info,
+  .about--info {
+    padding-left: 2rem;
+    width: 400px;
+  }
+  .hero--highlight {
+    width: 210px;
+    height: 30px;
+  }
+  .hero--info > h1 {
+    margin-top: 0.8rem;
+    color: #0a093d;
+    font-size: 50px;
+  }
+
+  .hero--info > p {
+    margin-top: 0.8rem;
+    color: #656464;
+    font-size: 18px;
+  }
+
+  .about--section {
+    margin-top: 6rem;
+  }
+
+  .acievements--section {
+    flex-direction: column;
+  }
+
+  .award--block,
+  .acievements--block {
+    margin-top: 5rem;
+  }
+
+  .team--img {
+    width: 136px;
+    height: 136px;
+  }
+
+  .team--img > img {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto;
+  }
+
+  /*Images*/
+  .hero--illustration > img,
+  .about--illustration > img {
+    width: 400px;
+    height: 400px;
+  }
+}
+
+@media all and (max-width: 768px) {
+  .app {
+    width: 620px;
+    height: 770px;
+  }
+  .header {
+    position: relative;
+    display: none;
+  }
+
+  .logo--img {
+    position: absolute;
+    top: 10%;
+    right: 90%;
+  }
+
+  .nav--first {
+    padding-right: 4rem;
+    background-color: #fff;
+    width: 200px;
+    height: 100vh;
+    top: 0;
+    right: 0;
+    position: absolute;
+    flex-direction: column;
+  }
+  .nav--second {
+    display: none;
+  }
+
+  .nav--links > ul {
+    flex-direction: column;
+  }
+
+  .hero--section {
+    flex-direction: column-reverse;
+    padding: 0 1.3rem;
+  }
+  .about--section {
+    margin-top: 6rem;
+  }
+
+  .about--section {
+    margin-top: 6rem;
+  }
+
+  .team--info {
+    margin-left: 0rem;
+    width: 400px;
+  }
+  .about--section,
+  .acievements--section,
+  .team--section,
+  .team--people--info,
+  .foot--nav {
+    flex-direction: column;
+  }
+
+  .award--block {
+    margin-top: 4rem;
+  }
+  .achievements--blocks {
+    margin-top: 8rem;
+  }
+  .hero--info > h1,
+  .hero--info > p,
+  .hero--buttons {
+    margin-top: 1.2rem;
+  }
+
+  .hero--info > h1 {
+    font-size: 46px;
+  }
+
+  .hero--info > p {
+    font-size: 16px;
+  }
+  .team--accordian {
+    width: 460px;
+    margin-left: 0;
+  }
+
+  .team--profile {
+    margin-top: 2rem;
+    text-align: center;
+  }
+  .foot--nav > .logo {
+    margin-top: 0.6rem;
+  }
+  .foot--links {
+    margin-top: 3rem;
+    margin-right: 0.7rem;
+  }
+
+  /*Images*/
+  .hero--illustration > img,
+  .about--illustration > img {
+    width: 370px;
+    height: 430px;
+  }
+}
+
+/*Media Querries*/
+
+@media all and (max-width: 430px) {
+  .app {
+    width: 400px;
+    height: 770px;
+  }
+  .header {
+    position: relative;
+    display: none;
+  }
+
+  .logo--img {
+    position: absolute;
+    top: 10%;
+    right: 90%;
+  }
+
+  .nav--first {
+    padding-right: 4rem;
+    background-color: #fff;
+    width: 200px;
+    height: 100vh;
+    top: 0;
+    right: 0;
+    position: absolute;
+    flex-direction: column;
+  }
+  .nav--second {
+    display: none;
+  }
+
+  .nav--links > ul {
+    flex-direction: column;
+  }
+
+  .hero--info {
+    width: 350px;
+  }
+
+  .hero--section {
+    flex-direction: column-reverse;
+    padding: 0 1.3rem;
+  }
+  .about--section {
+    margin-top: 6rem;
+  }
+
+  .about--section {
+    margin-top: 6rem;
+  }
+
+  .about--info,
+  .team--info {
+    width: 350px;
+  }
+
+  .team--info {
+    margin-left: 0rem;
+    width: 400px;
+  }
+  .about--section,
+  .acievements--section,
+  .team--section,
+  .team--people--info,
+  .foot--nav {
+    flex-direction: column;
+  }
+
+  .award--block {
+    margin-top: 4rem;
+  }
+  .achievements--blocks {
+    margin-top: 8rem;
+  }
+  .hero--info > h1,
+  .hero--info > p,
+  .hero--buttons {
+    margin-top: 1.2rem;
+  }
+
+  .hero--info > h1 {
+    font-size: 36px;
+  }
+
+  .hero--info > p {
+    font-size: 16px;
+  }
+  .team--accordian {
+    width: 460px;
+    margin-left: 0;
+  }
+
+  .team--profile {
+    margin-top: 2rem;
+    text-align: center;
+  }
+
+  .team--accordian {
+    margin-left: 2rem;
+    width: 300px;
+  }
+  .team--accordian > div > button {
+    background: #a6c4eb;
+    color: #656464;
+    width: 100px;
+    height: 55px;
+    border: none;
+    border-radius: 15px;
+  }
+
+  .foot--nav > .logo {
+    margin-top: 0.6rem;
+  }
+  .foot--links {
+    margin-top: 3rem;
+    margin-right: 5.7rem;
+  }
+
+  .foot--links > ul {
+    display: block;
+  }
+
+  .foot--links > ul > li {
+    margin-top: 2rem;
+  }
+
+  /*Images*/
+  .hero--illustration > img,
+  .about--illustration > img {
+    width: 340px;
+    height: 430px;
+  }
+
+  .hero--illustration {
+    margin-right: 2.3rem;
+  }
+}
