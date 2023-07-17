@@ -1,12 +1,6 @@
-let menuButton = document.querySelectorAll("hamburger")
-let NavMenu = document.querySelectorAll("nav--links")
-menuButton.addEventListener("click",()=>{
-    if(NavMenu.style.display == "none"){
-        NavMenu.style.display = "block"
-    }
+const menuButton = document.querySelector(".hamburger");
+const navMenu = document.querySelector(".nav--links");
 
-    else{
-        NavMenu.style.display = "none"
-    }
-
-})
+menuButton.addEventListener("click", () => {
+  navMenu.classList.toggle("show");
+});

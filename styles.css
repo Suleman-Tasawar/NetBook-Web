@@ -5,6 +5,15 @@
   font-family: "Inter", sans-serif;
 }
 
+:root {
+  --light--blue-color: #217bf4;
+  --header--color: #dfecfd;
+  --black--nav: #2b2b39;
+  --dark--blue--font: #0a093d;
+  --light--grey--color: #656464;
+  --white--color: #fff;
+}
+
 /*Layout*/
 
 .app {
@@ -17,7 +26,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid #dfecfd;
+  border-bottom: 1px solid var(--header--color);
 }
 
 .nav--first {
@@ -42,6 +51,10 @@ button,
   align-items: center;
 }
 
+.nav--links{
+  margin-left: 2rem;
+}
+
 .nav--links > ul {
   display: flex;
   list-style-type: none;
@@ -64,7 +77,7 @@ button,
 
 .foot--nav {
   width: 100%;
-  background: #2b2b39;
+  background: var(--black--nav);
 }
 
 .acievements--section,
@@ -103,7 +116,7 @@ button,
 .search--bar {
   border-radius: 12px;
   height: 30px;
-  background-color: #fff;
+  background-color: var(--white--color);
 }
 .search--input > input {
   width: 150px;
@@ -117,35 +130,82 @@ button,
   width: 120px;
   height: 50px;
   border-radius: 14px;
-  background-color: #217bf4;
-  color: #ffff;
+  background-color: var(--light--blue-color);
+  color: var(--white--color);
   border: none;
 }
-.hero--info {
+
+/*Animating*/
+.hero--info,
+.about--info {
+  animation: slideFromLeft 1s ease-in-out;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
   width: 500px;
 }
+
+@keyframes slideFromLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fallingBounce {
+  0% {
+    transform: translateY(-100%);
+  }
+  50% {
+    transform: translateY(0);
+    animation-timing-function: ease-in;
+  }
+  70% {
+    transform: translateY(-30px);
+    animation-timing-function: ease-out;
+  }
+  85% {
+    transform: translateY(0);
+    animation-timing-function: ease-in;
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.acievements--section {
+  animation: fallingBounce 1s;
+  animation-fill-mode: forwards;
+}
+
+/*Animating*/
 .hero--highlight {
+  padding-top: 1rem;
+  text-align: center;
   width: 210px;
   height: 30px;
-  background-color: #217bf4;
+  background-color: var(--light--blue-color);
   opacity: 0.10000000149011612;
   border-radius: 7px;
   text-align: center;
 }
 
 .hero--highlight h3 {
-  color: #217bf4;
+  color: #fafafa;
 }
 
 .hero--info > h1 {
   margin-top: 0.8rem;
-  color: #0a093d;
+  color: var(--dark--blue--font);
   font-size: 56px;
 }
 
 .hero--info > p {
   margin-top: 0.8rem;
-  color: #656464;
+  color: var(--light--grey--color);
   font-size: 18px;
 }
 
@@ -163,13 +223,14 @@ button,
 }
 
 .hero--buttons > div:nth-of-type(1) > button {
-  background: #217bf4;
-  color: #fff;
+  background: var(--light--blue-color);
+  color: var(--white--color);
 }
 
 .hero--buttons > div:nth-of-type(2) > button {
-  color: #217bf4;
-  background: #fff;
+  color: var(--light--blue-color);
+  background: var(--white--color);
+  border: 1px solid var(--light--blue-color);
 }
 
 .about--info {
@@ -177,19 +238,19 @@ button,
 }
 
 .about--info > h3 {
-  color: #217bf4;
+  color: var(--light--blue-color);
   font-size: 18px;
 }
 
 .about--info > h1 {
   margin-top: 0.8rem;
-  color: #0a093d;
+  color: var(--dark--blue--font);
   font-size: 36px;
 }
 
 .about--info > p {
   margin-top: 0.8rem;
-  color: #656464;
+  color: var(--light--grey--color);
   font-size: 18px;
 }
 
@@ -198,13 +259,13 @@ button,
 }
 
 .about--lists > ul > li {
-  color: #0a093d;
+  color: var(--dark--blue--font);
   list-style-type: none;
 }
 
 .about--lists > ul > li::before {
   content: "\2022"; /* Add content: \2022 is the CSS Code/unicode for a bullet */
-  color: #217bf4; /* Change the color */
+  color: var(--light--blue-color); /* Change the color */
   font-weight: bold; /* If you want it to be bold */
   display: inline-block; /* Needed to add space between the bullet and the text */
   width: 1em; /* Also needed for space (tweak if needed) */
@@ -214,8 +275,8 @@ button,
 .ratings-blocks,
 .acievements--block,
 .award--block {
+  background: var(--white--color);
   padding: 1rem;
-  border: 1px solid #656464;
   border-radius: 14px;
   margin-top: 2rem;
 }
@@ -223,7 +284,7 @@ button,
 .ratings-block:hover,
 .acievements--block:hover,
 .award--block:hover {
-  background: #fff;
+  background: var(--white--color);
   box-shadow: 0px 26px 49px 0px rgba(146, 165, 184, 0.14);
 }
 
@@ -243,27 +304,27 @@ button,
 
 .ratings--highlight,
 .awards--highlight {
-  color: #217bf4;
+  color: var(--light--blue-color);
 }
 
 .ratings--para,
 .award--para {
   margin-top: 1.4rem;
-  color: #656464;
+  color: var(--light--grey--color);
 }
 
 .ratings--button {
   margin-top: 1.4rem;
   border: none;
-  color: #217bf4;
-  background-color: #fff;
+  color: var(--light--grey--color);
+  background-color: var(--white--color);
 }
 
 .award--button {
   margin-top: 1.4rem;
   border: none;
-  color: #656464;
-  background-color: #ffff;
+  color: var(--light--grey--color);
+  background-color: var(--white--color);
 }
 
 .acievements--block h3 {
@@ -272,13 +333,13 @@ button,
 
 .acievements--block h1 {
   margin-top: 1.4rem;
-  color: #0a093d;
+  color: var(--dark--blue--font);
   font-size: 32px;
 }
 
 .acievements--block p {
   margin-top: 1.4rem;
-  color: #656464;
+  color: var(--light--grey--color);
 }
 
 .acievements--block button {
@@ -287,23 +348,23 @@ button,
   height: 58px;
   border: none;
   border-radius: 16px;
-  background: #217bf4;
-  color: #ffff;
+  background: var(--light--blue-color);
+  color: var(--white--color);
 }
 
 .team--info > p:nth-of-type(1) {
-  color: #217bf4;
+  color: var(--light--blue-color);
 }
 
 .team--info > h1 {
   margin-top: 0.8rem;
-  color: #0a093d;
+  color: var(--dark--blue--font);
   font-size: 36px;
 }
 
 .team--text--fade {
   margin-top: 0.8rem;
-  color: #656464;
+  color: var(--light--grey--color);
 }
 
 .team--info {
@@ -322,7 +383,7 @@ button,
 
 .team--accordian > div > button {
   background: #a6c4eb;
-  color: #656464;
+  color: var(--light--grey--color);
   width: 150px;
   height: 55px;
   border: none;
@@ -330,8 +391,8 @@ button,
 }
 
 .team--accordian > div > button:active {
-  color: #fff;
-  background: #217bf4;
+  color: var(--white--color);
+  background: var(--light--blue-color);
 }
 
 .team--img {
@@ -342,12 +403,12 @@ button,
 
 .team--name > h1 {
   margin-top: 1rem;
-  color: #2f2c4a;
+  color: var(--dark--blue--font);
 }
 
 .team--code > p {
   margin-top: 0.5rem;
-  color: #656464;
+  color: var(--light--grey--color);
 }
 
 .team--profile {
@@ -356,8 +417,14 @@ button,
 
 .foot--links > ul {
   display: flex;
-  color: #fff;
+  color: var(--white--color);
   list-style-type: none;
+}
+
+.nav--links > ul > li:hover,
+.foot--links > ul > li :hover {
+  color: var(--light--grey--color);
+  transition: 0.2s;
 }
 
 .foot--links > ul,
@@ -376,7 +443,7 @@ li {
   width: 25px;
   height: 25px;
   border-radius: 16px;
-  background: #fff;
+  background: var(--white--color);
 }
 
 /*Images*/
@@ -389,6 +456,9 @@ li {
 /*Media Querries*/
 
 @media screen and (min-width: 768px) and (max-width: 1100px) {
+  .app {
+    height: 900px;
+  }
   .nav--second,
   .search--bar {
     margin-left: 1.7rem;
@@ -409,13 +479,11 @@ li {
   }
   .hero--info > h1 {
     margin-top: 0.8rem;
-    color: #0a093d;
     font-size: 50px;
   }
 
   .hero--info > p {
     margin-top: 0.8rem;
-    color: #656464;
     font-size: 18px;
   }
 
@@ -460,15 +528,19 @@ li {
   }
 
   .nav--links {
-    display: none;
-    top: 0;
+    top: 110%;
     right: 0;
     position: absolute;
+    display: none;
+  }
+
+  .nav--links.show {
     width: 200px;
     height: 100vh;
     line-height: 5;
-    background-color: #fff;
+    background-color: var(--white--color);
     text-align: center;
+    display: block;
   }
 
   .nav--links > ul {
@@ -560,7 +632,7 @@ li {
 @media all and (max-width: 430px) {
   .app {
     width: 400px;
-    height: 790px;
+    height: 850px;
   }
   .header {
     position: relative;
@@ -574,7 +646,7 @@ li {
     width: 200px;
     height: 100vh;
     line-height: 5;
-    background-color: #fff;
+    background-color: var(--white--color);
     text-align: center;
   }
   .nav--links > ul {
@@ -622,6 +694,10 @@ li {
     flex-direction: column;
   }
 
+  .team--people--info {
+    margin-right: 2rem;
+  }
+
   .award--block {
     margin-top: 4rem;
   }
@@ -656,8 +732,6 @@ li {
     width: 300px;
   }
   .team--accordian > div > button {
-    background: #a6c4eb;
-    color: #656464;
     width: 100px;
     height: 55px;
     border: none;
@@ -683,8 +757,8 @@ li {
   /*Images*/
   .hero--illustration > img,
   .about--illustration > img {
-    width: 340px;
-    height: 430px;
+    min-width: 340px;
+    min-height: 430px;
   }
 
   .hero--illustration {
