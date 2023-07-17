@@ -177,7 +177,7 @@ button,
 }
 
 .acievements--section {
-  animation: fallingBounce 1s;
+  animation: fallingBounce 3s;
   animation-fill-mode: forwards;
 }
 
