@@ -74,6 +74,26 @@ button,
   margin-top: 5.5rem;
 }
 
+.hamburger {
+  cursor: pointer;
+  display: none;
+  width: 30px;
+  height: 30px;
+}
+
+.line {
+  width: 30px;
+  border-top: 3px solid #000;
+}
+
+.line:nth-of-type(2) {
+  margin-top: 9px;
+}
+
+.line:nth-of-type(3) {
+  margin-top: 14px;
+}
+
 /*Typo*/
 
 .nav--links > ul > li {
@@ -347,15 +367,14 @@ li {
 
 .social--links {
   height: 170px;
-  margin-bottom: 2rem;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
 }
 .social--links > div {
   margin-left: 1rem;
-  width: 36px;
-  height: 36px;
+  width: 25px;
+  height: 25px;
   border-radius: 16px;
   background: #fff;
 }
@@ -434,36 +453,38 @@ li {
 
 @media all and (max-width: 768px) {
   .app {
-    width: 620px;
     height: 770px;
   }
   .header {
     position: relative;
+  }
+
+  .nav--links {
     display: none;
-  }
-
-  .logo--img {
-    position: absolute;
-    top: 10%;
-    right: 90%;
-  }
-
-  .nav--first {
-    padding-right: 4rem;
-    background-color: #fff;
-    width: 200px;
-    height: 100vh;
     top: 0;
     right: 0;
     position: absolute;
-    flex-direction: column;
-  }
-  .nav--second {
-    display: none;
+    width: 200px;
+    height: 100vh;
+    line-height: 5;
+    background-color: #fff;
+    text-align: center;
   }
 
   .nav--links > ul {
     flex-direction: column;
+  }
+
+  .login--button {
+    margin-right: 2rem;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .search--bar {
+    display: none;
   }
 
   .hero--section {
@@ -539,35 +560,33 @@ li {
 @media all and (max-width: 430px) {
   .app {
     width: 400px;
-    height: 770px;
+    height: 790px;
   }
   .header {
     position: relative;
+  }
+
+  .nav--links {
     display: none;
-  }
-
-  .logo--img {
-    position: absolute;
-    top: 10%;
-    right: 90%;
-  }
-
-  .nav--first {
-    padding-right: 4rem;
-    background-color: #fff;
-    width: 200px;
-    height: 100vh;
     top: 0;
     right: 0;
     position: absolute;
-    flex-direction: column;
+    width: 200px;
+    height: 100vh;
+    line-height: 5;
+    background-color: #fff;
+    text-align: center;
   }
-  .nav--second {
-    display: none;
-  }
-
   .nav--links > ul {
     flex-direction: column;
+  }
+
+  .login--button {
+    margin-right: 2rem;
+  }
+
+  .hamburger {
+    display: block;
   }
 
   .hero--info {
