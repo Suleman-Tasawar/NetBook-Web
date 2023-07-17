@@ -51,7 +51,7 @@ button,
   align-items: center;
 }
 
-.nav--links{
+.nav--links {
   margin-left: 2rem;
 }
 
@@ -640,7 +640,7 @@ li {
 
   .nav--links {
     display: none;
-    top: 0;
+    top: 110%;
     right: 0;
     position: absolute;
     width: 200px;
